@@ -13,6 +13,14 @@ class Game
 		if !pal.is_a? String
 			fail "Es un numero y no se puede" 
 		end
+		if pal =~ /\d/
+			fail "Es un alpha y no se puede" 
+		end
+		if pal.match(" ")
+			fail "Contiene espacio y no se puede" 
+		end
+
+
 		@palabra = pal
 	end
 
