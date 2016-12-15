@@ -23,4 +23,10 @@ describe "juego contacto" do
 		juego = Game.new
 		expect {juego.asignar_palabra 12 }.to raise_error
 	end
+
+	it "ingresar palabra con espacios, devuelve error" do
+		juego = Game.new
+		expect {juego.asignar_palabra "hola mundo" }.to raise_error
+	end
+
 end
