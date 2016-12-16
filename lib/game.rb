@@ -3,6 +3,7 @@ class Game
 	def initialize
 		@palabra = ""
 		@letras_a_mostrar = 1
+		@preguntas_slave = []
 	end
 
 	def ver_palabra
@@ -29,6 +30,14 @@ class Game
 
 	def incrementar_letras
 		@letras_a_mostrar +=1
+	end
+
+	def agregar_pregunta_slave pregunta
+		@preguntas_slave << pregunta
+	end
+
+	def obtener_preguntas_slave
+		@preguntas_slave
 	end
 
 end
