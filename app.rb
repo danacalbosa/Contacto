@@ -10,6 +10,10 @@ end
 
 get '/slave' do
 	@letras = @@juego.mostrar_palabra_slave
+	if @@juego.is_finalizado
+		@mensaje = "Ganaste!"
+	end
+
 	erb	:pagina_slave
 end
 

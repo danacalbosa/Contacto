@@ -75,5 +75,9 @@ class Game
 	def finalizado valor
 		@finalizado = valor
 	end
+	
+	def is_finalizado
+		@finalizado
+	end
 end
 

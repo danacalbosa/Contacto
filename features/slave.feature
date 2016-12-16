@@ -33,6 +33,6 @@ Scenario: Pierde el juego
 	Then voy a pagina inicial
 	And hago click "Si!"
 	And voy a pagina inicial_slave
-	And veo texto "Empieza con"
+	And veo texto "Ganaste!"
 
 
