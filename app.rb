@@ -4,7 +4,6 @@ require_relative "./lib/game.rb"
 @@juego = Game.new
 @@juego.asignar_palabra "FRUTILLA"
 
-
 get '/' do
 	erb	:pagina_king
     
@@ -24,3 +23,14 @@ get '/verpreguntasslave' do
 	erb :pagina_king
 end
 
+get '/verpreguntasslave' do
+	@contacto = @@juego.respuesta_contacto
+	
+end
+
+post '/enviarPregunta' do
+	@@juego.agregar_pregunta_slave params["pregunta"]
+	@@juego.agregar_respuesta_slave params["respuesta"]
+	erb :pagina_slave
+end
+	
