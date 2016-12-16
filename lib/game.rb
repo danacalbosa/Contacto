@@ -50,5 +50,17 @@ class Game
 		@respuestas_slave
 	end
 
+	def validar_respuesta (respuesta, cant_caract)
+		$i = 0
+
+		while $i < cant_caract.to_i do
+			if respuesta[$i] != @palabra[$i]
+				return false
+			end			
+			$i +=1
+		end
+		return true
+	end
+
 end
 
