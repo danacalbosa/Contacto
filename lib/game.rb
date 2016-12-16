@@ -31,5 +31,7 @@ class Game
 		@letras_a_mostrar +=1
 	end
 
+
+
 end
 
