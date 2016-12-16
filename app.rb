@@ -6,7 +6,7 @@ require_relative "./lib/game.rb"
 
 
 get '/' do
-	erb	:pagina_king
+	erb :pagina_king
     
 end
 
@@ -17,6 +17,7 @@ end
 
 post '/enviarPalabra' do
 	@@juego.asignar_palabra params["palabra"]
+	erb :pagina_king
 end
 
 get '/verpreguntasslave' do
