@@ -1,11 +1,9 @@
 require 'sinatra'
 require_relative "./lib/game.rb"
 
-@@juego = Game.new
-
 get '/' do
+@@juego = Game.new
 	erb :pagina_king
-    
 end
 
 get '/slave' do
