@@ -16,6 +16,8 @@ Scenario: Muestra el texto Respuesta:
 	Given voy a pagina inicial_slave
 	And veo texto_respuesta "Respuesta:"
 
+Scenario: Ingreso
+
 Scenario: Muestra el titulo Pagina Slave
 	Given voy a pagina inicial_slave
 	Then veo titulo "Pagina Slave"
