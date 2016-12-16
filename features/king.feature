@@ -15,3 +15,5 @@ Scenario: Se ingresa "Palabra secreta"
 Scenario: Muestra texto "Ver preguntas"
 	Given voy a pagina inicial
 	Then veo textoPreguntas "Ver Preguntas"
+	And ingreso "Frutilla"
+
