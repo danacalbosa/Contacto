@@ -1,6 +1,6 @@
 Feature: King_feature
 
-Scenario: Muestra el titulo Pagina Kind
+Scenario: Muestra el titulo Pagina King
 	Given voy a pagina inicial
 	Then veo titulo "Pagina King"
 
@@ -22,4 +22,7 @@ Scenario: Se ingresa "Palabra secreta"
 	When ingreso "9"
 	Then veo texto "Palabra invalida"
 
+Scenario: Muestra el link jugador slave
+	Given voy a pagina inicial
+	Then veo texto "Jugador Slave"
 
