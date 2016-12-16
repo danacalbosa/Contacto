@@ -10,6 +10,7 @@ class Game
 	end
 
 	def asignar_palabra pal
+		#if !pal =~ /\s/
 		if !pal.is_a? String
 			fail "Es un numero y no se puede" 
 		end
