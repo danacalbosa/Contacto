@@ -63,6 +63,16 @@ When(/^hago click "(.*?)"$/) do |arg1|
   click_link(arg1)
 end
 
+Then(/^ingreso respuesta contacto "(.*?)"$/) do |value|
+	fill_in("respuesta_contacto", :with => value)
+	click_button("Submit_contacto")
+end
+
+Then(/^verifico que exista "(.*?)"$/) do |value|
+	last_response.body.should =~ /#{value}/m
+end
+
+
 
 
 

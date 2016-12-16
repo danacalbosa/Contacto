@@ -56,3 +56,14 @@ get '/si' do
 	erb :pagina_king
 end
 
+post '/enviarContacto' do
+	@@juego.agregar_respuesta_contacto params["respuesta_contacto"]
+	if @@juego.existe_contacto
+		@haycontacto = "Hay contacto"
+	else
+		@haycontacto = "No hay contacto"
+	end
+	
+	erb :pagina_slave
+end
+

@@ -11,7 +11,11 @@ Empieza con <strong><%= @letras %></strong>
 
 </form>
 
+<form action="/enviarContacto" method="post">
+  <p><input type="text" name="respuesta_contacto"> </p> <br> 
+  <input type="submit" value="Submit_contacto">
+</form>
 
-
+<strong><%= @haycontacto %></strong>
 
 

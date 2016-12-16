@@ -7,6 +7,7 @@ class Game
 		@respuestas_slave = []
 		@respuesta_king = ""
 		@finalizado = false
+		@respuesta_contacto = ""
 	end
 
 	def ver_palabra
@@ -75,5 +76,17 @@ class Game
 	def finalizado valor
 		@finalizado = valor
 	end
+
+	def agregar_respuesta_contacto respuesta_contacto
+		@respuesta_contacto = respuesta_contacto
+	end
+
+	def existe_contacto
+		if @respuesta_contacto == @respuestas_slave[@respuestas_slave.count-1]
+			return true
+		end
+		return false
+	end
+
 end
 

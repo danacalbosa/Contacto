@@ -22,6 +22,11 @@ Scenario: Muestra el titulo Pagina Slave
 	Given voy a pagina inicial_slave
 	Then veo titulo "Pagina Slave"
 
+Scenario: Ingresar respuesta contacto
+	Given voy a pagina inicial_slave
+	Then ingreso respuesta contacto "Foca"
+	And ingreso respuesta "Foza"
+
 
 
 
