@@ -52,7 +52,7 @@ class Game
 		@respuestas_slave
 	end
 
-	def responder_rey respuesta
+	def responder_king respuesta
 		@respuesta_king << respuesta
 	end
 

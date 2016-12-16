@@ -38,9 +38,9 @@ post '/enviarPregunta' do
 end
 
 
-post '/enviarRespuestaKing' do
+post '/enviar_respuesta_king' do
 	begin
-		@@juego.responder_rey params["respuestaking"]
+		@@juego.responder_king params["respuestaking"]
 		@@juego.validar_respuesta_rey
 	rescue
 		@mensaje = "Palabra invalida"

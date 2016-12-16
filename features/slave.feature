@@ -22,7 +22,17 @@ Scenario: Muestra el titulo Pagina Slave
 	Given voy a pagina inicial_slave
 	Then veo titulo "Pagina Slave"
 
+Scenario: Pierde el juego
+	Given voy a pagina inicial
+	And ingreso "Frutilla"
+
+	When voy a pagina inicial_slave
+	And ingreso pregunta "fruta?"
+	And ingreso respuesta "Frutilla"
+
+	Then voy a pagina inicial
+	And hago click "Si!"
+	And voy a pagina inicial_slave
+	And veo texto "Empieza con"
 
 
-
-	
