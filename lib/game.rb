@@ -29,7 +29,7 @@ class Game
 	end
 
 	def mostrar_palabra_slave
-		@palabra[@letras_a_mostrar-1]
+		@palabra[0..@letras_a_mostrar-1]
 	end
 
 	def incrementar_letras
@@ -78,6 +78,10 @@ class Game
 	
 	def is_finalizado
 		@finalizado
+	end
+
+	def hacer_contacto
+		@letras_a_mostrar += 1
 	end
 end
 
