@@ -15,6 +15,11 @@ Then(/^veo textoPreguntas "(.*?)"$/) do |textoPreguntas|
 	last_response.body.should =~ /#{textoPreguntas}/m
 end
 
+Then(/^ingreso respuesta_king "(.*?)"$/) do |value|
+  	fill_in("respuesta_king", :with => value)
+	click_button("Submit")
+end
+
 
 
 
@@ -54,6 +59,9 @@ Then(/^ingreso respuesta "(.*?)"$/) do |value|
 	click_button("Submit")
 end
 
+When(/^hago click "(.*?)"$/) do |arg1|
+  click_link(arg1)
+end
 
 
 

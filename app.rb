@@ -30,7 +30,6 @@ end
 
 get '/verpreguntasslave' do
 	@contacto = @@juego.respuesta_contacto
-	
 end
 
 post '/enviarPregunta' do
@@ -38,6 +37,7 @@ post '/enviarPregunta' do
 	@@juego.agregar_respuesta_slave params["respuesta"]
 	erb :pagina_slave
 end
+
 
 post '/enviarRespuestaKing' do
 	begin
@@ -51,3 +51,9 @@ post '/enviarRespuestaKing' do
 end
 
 	
+get '/si' do
+	@@juego.finalizado true
+	@mensaje = "Perdiste!"
+	erb :pagina_king
+end
+

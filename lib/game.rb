@@ -6,6 +6,7 @@ class Game
 		@preguntas_slave = []
 		@respuestas_slave = []
 		@respuesta_king = ""
+		@finalizado = false
 	end
 
 	def ver_palabra
@@ -55,9 +56,20 @@ class Game
 		@respuesta_king << respuesta
 	end
 
-	def validar_respuesta_king
-		(@respuesta_king[@letras_a_mostrar] != @palabra[@letras_a_mostrar])
-		
+	def validar_respuesta (respuesta, cant_caract)
+		$i = 0
+
+		while $i < cant_caract.to_i do
+			if respuesta[$i] != @palabra[$i]
+				return false
+			end			
+			$i +=1
+		end
+		return true
+	end
+
+	def finalizado valor
+		@finalizado = valor
 	end
 end
 
