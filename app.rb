@@ -62,6 +62,8 @@ post '/enviarContacto' do
 	@@juego.agregar_respuesta_contacto params["respuesta_contacto"]
 	if @@juego.existe_contacto
 		@haycontacto = "Hay contacto"
+		@@juego.hacer_contacto
+		@letras = @@juego.mostrar_palabra_slave
 	else
 		@haycontacto = "No hay contacto"
 	end
