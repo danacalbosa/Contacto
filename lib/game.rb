@@ -5,6 +5,7 @@ class Game
 		@letras_a_mostrar = 1
 		@preguntas_slave = []
 		@respuestas_slave = []
+		@finalizado = false
 	end
 
 	def ver_palabra
@@ -62,5 +63,8 @@ class Game
 		return true
 	end
 
+	def finalizado valor
+		@finalizado = valor
+	end
 end
 
