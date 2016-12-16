@@ -20,12 +20,15 @@ class Game
 			fail "Contiene espacio y no se puede" 
 		end
 
-
 		@palabra = pal
 	end
 
 	def mostrar_palabra_slave
 		@palabra[@letras_a_mostrar-1]
+	end
+
+	def incrementar_letras
+		@letras_a_mostrar +=1
 	end
 
 end
