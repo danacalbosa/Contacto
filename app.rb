@@ -24,7 +24,7 @@ post '/enviarPalabra' do
 end
 
 get '/verpreguntasslave' do
-	@preguntas = @@juego.obtener_preguntas_slave
+	@preguntas = @@juego.obtener_preguntas_slave_texto
 	erb :pagina_king
 end
 
