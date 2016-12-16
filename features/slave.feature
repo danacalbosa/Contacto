@@ -5,7 +5,6 @@ Scenario: Muestra el titulo Pagina Slave
 	Then veo titulo_slave "Pagina Slave"
 	And veo texto "Empieza con"
 
-
 Scenario: Muestra el texto "Es un/a" e ingreso "pregunta"
 	Given voy a pagina inicial_slave
 	Then veo texto_pregunta "Es un/a"

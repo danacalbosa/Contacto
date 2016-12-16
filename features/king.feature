@@ -26,7 +26,14 @@ Scenario: Muestra el link jugador slave
 	Given voy a pagina inicial
 	Then veo texto "Jugador Slave"
 
+
 Scenario: Ingresa respuesta "respuesta_king"
 	Given voy a pagina inicial
 	Then ingreso respuesta_king "respuesta_king"
+
+Scenario: Pierde el juego
+	Given voy a pagina inicial
+	When hago click "Si!"
+	Then veo texto "Perdiste!"
+
 
