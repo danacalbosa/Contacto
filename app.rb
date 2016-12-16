@@ -14,4 +14,8 @@ get '/slave' do
 	erb	:pagina_slave
 end
 
+get '/verpreguntasslave' do
+	@preguntas = @@juego.obtener_preguntas_slave
+	erb :pagina_king
+end
 

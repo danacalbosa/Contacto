@@ -40,6 +40,5 @@ class Game
 		@preguntas_slave
 	end
 
-
 end
 
