@@ -11,6 +11,20 @@ Then(/^ingreso "(.*?)"$/) do |value|
 	click_button("Submit")
 end
 
+Then(/^veo textoPreguntas "(.*?)"$/) do |textoPreguntas|
+	last_response.body.should =~ /#{textoPreguntas}/m
+end
+
+
+
+
+
+
+
+
+#####################################################
+
+
 Given(/^voy a pagina inicial_slave$/) do
   visit '/slave'
 end
