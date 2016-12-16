@@ -2,7 +2,6 @@ require 'sinatra'
 require_relative "./lib/game.rb"
 
 @@juego = Game.new
-@@juego.asignar_palabra "FRUTILLA"
 
 get '/' do
 	erb :pagina_king
@@ -38,8 +37,22 @@ post '/enviarPregunta' do
 	erb :pagina_slave
 end
 
+
+post '/enviarRespuestaKing' do
+	begin
+		@@juego.responder_rey params["respuestaking"]
+		@@juego.validar_respuesta_rey
+	rescue
+		@mensaje = "Palabra invalida"
+	end
+
+	erb :pagina_king
+end
+
+	
 get '/si' do
 	@@juego.finalizado true
 	@mensaje = "Perdiste!"
 	erb :pagina_king
 end
+

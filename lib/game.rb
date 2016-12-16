@@ -5,6 +5,7 @@ class Game
 		@letras_a_mostrar = 1
 		@preguntas_slave = []
 		@respuestas_slave = []
+		@respuesta_king = ""
 		@finalizado = false
 	end
 
@@ -51,9 +52,12 @@ class Game
 		@respuestas_slave
 	end
 
-
 	def obtener_preguntas_slave_texto
 		return "Es un " + @preguntas_slave[@preguntas_slave.count-1] + "?"
+	end
+
+	def responder_rey respuesta
+		@respuesta_king << respuesta
 	end
 
 	def validar_respuesta (respuesta, cant_caract)
