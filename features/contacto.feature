@@ -20,10 +20,10 @@ Scenario: Muestra el titulo Pagina Slave
 	And veo texto "F"
 
 
-Scenario: Muestra el texto Es un/a ?
+Scenario: Muestra el texto "Es un/a" e ingreso "pregunta"
 	Given voy a pagina inicial_slave
-	Then veo texto_pregunta "Es un/a ?"
-
+	Then veo texto_pregunta "Es un/a"
+	And ingreso pregunta "Pregunta"
 
 Scenario: Muestra el texto Respuesta:
 	Given voy a pagina inicial_slave
@@ -32,7 +32,6 @@ Scenario: Muestra el texto Respuesta:
 Scenario: Muestra el titulo Pagina Slave
 	Given voy a pagina inicial_slave
 	Then veo titulo "Pagina Slave"
-
 
 
 

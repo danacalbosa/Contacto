@@ -18,4 +18,8 @@ post '/enviarPalabra' do
 	@@juego.asignar_palabra params["palabra"]
 end
 
+get '/verpreguntasslave' do
+	@preguntas = @@juego.obtener_preguntas_slave
+	erb :pagina_king
+end
 
