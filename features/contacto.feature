@@ -14,4 +14,8 @@ Scenario: Muestra el titulo Pagina Slave
 Scenario: Muestra el texto Es un/a ?
 	Given voy a pagina inicial_slave
 	Then veo texto_pregunta "Es un/a ?"
+
+Scenario: Muestra el texto Respuesta:
+	Given voy a pagina inicial_slave
+	And veo texto_respuesta "Respuesta:"
 	
