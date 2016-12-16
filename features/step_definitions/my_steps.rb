@@ -11,9 +11,24 @@ Then(/^ingreso "(.*?)"$/) do |value|
 	click_button("Submit")
 end
 
+Then(/^veo textoPreguntas "(.*?)"$/) do |textoPreguntas|
+	last_response.body.should =~ /#{textoPreguntas}/m
+end
+
+
+
+
+
+
+
+
+#####################################################
+
+
 Given(/^voy a pagina inicial_slave$/) do
   visit '/slave'
 end
+
 Then(/^veo titulo_slave "(.*?)"$/) do |titulo|
 	last_response.body.should =~ /#{titulo}/m
 end 
@@ -33,6 +48,13 @@ end
 Given(/^veo texto_respuesta "(.*?)"$/) do |texto_respuesta|
 	last_response.body.should =~ /#{texto_respuesta}/m
 end
+
+Then(/^ingreso respuesta "(.*?)"$/) do |value|
+  fill_in("respuesta", :with => value)
+	click_button("Submit")
+end
+
+
 
 
 

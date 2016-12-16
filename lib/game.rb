@@ -4,6 +4,7 @@ class Game
 		@palabra = ""
 		@letras_a_mostrar = 1
 		@preguntas_slave = []
+        @respuestas_slave = []
 	end
 
 	def ver_palabra
@@ -36,10 +37,12 @@ class Game
 	def agregar_pregunta_slave pregunta
 		@preguntas_slave << pregunta
 	end
-
-	def obtener_preguntas_slave
-		@preguntas_slave
+	def agregar_respuesta_slave respuesta
+		@respuestas_slave << respuesta
 	end
+	#def obtener_preguntas_slave
+	#	@preguntas_slave
+	#end
 
 end
 
