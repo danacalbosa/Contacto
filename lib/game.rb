@@ -30,7 +30,7 @@ class Game
 	end
 
 	def mostrar_palabra_slave
-		@palabra[@letras_a_mostrar-1]
+		@palabra[0..@letras_a_mostrar-1]
 	end
 
 	def incrementar_letras
@@ -53,12 +53,12 @@ class Game
 		@respuestas_slave
 	end
 
-	def obtener_preguntas_slave_texto
-		return "Es un " + @preguntas_slave[@preguntas_slave.count-1] + "?"
+	def responder_king respuesta
+		@respuesta_king << respuesta
 	end
 
-	def responder_rey respuesta
-		@respuesta_king << respuesta
+	def obtener_preguntas_slave_texto
+		return "Es un " + @preguntas_slave[@preguntas_slave.count-1] + "?"
 	end
 
 	def validar_respuesta (respuesta, cant_caract)
@@ -77,6 +77,7 @@ class Game
 		@finalizado = valor
 	end
 
+
 	def agregar_respuesta_contacto respuesta_contacto
 		@respuesta_contacto = respuesta_contacto
 	end
@@ -86,6 +87,16 @@ class Game
 			return true
 		end
 		return false
+	end
+
+
+	
+	def is_finalizado
+		@finalizado
+	end
+
+	def hacer_contacto
+		@letras_a_mostrar += 1
 	end
 
 end

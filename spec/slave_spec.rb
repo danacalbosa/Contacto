@@ -14,6 +14,7 @@ describe "acciones del slave" do
 		juego.obtener_preguntas_slave.length.should == 2
 	end
 
+
 	it "hago contacto valido" do
 		juego = Game.new
 		juego.agregar_pregunta_slave "Animal"
@@ -29,4 +30,13 @@ describe "acciones del slave" do
 		juego.agregar_respuesta_contacto "Asd"
 		juego.existe_contacto.should == false
 	end
+
+	it "ingresar palabra Hola, hacer contacto devuelve Ho" do
+		juego = Game.new
+		juego.asignar_palabra "Hola"
+		juego.mostrar_palabra_slave.should == "H"
+		juego.hacer_contacto
+		juego.mostrar_palabra_slave.should == "Ho"
+	end
+
 end

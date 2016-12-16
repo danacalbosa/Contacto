@@ -1,15 +1,17 @@
 require 'sinatra'
 require_relative "./lib/game.rb"
 
-@@juego = Game.new
-
 get '/' do
+@@juego = Game.new
 	erb :pagina_king
-    
 end
 
 get '/slave' do
 	@letras = @@juego.mostrar_palabra_slave
+	if @@juego.is_finalizado
+		@mensaje = "Ganaste!"
+	end
+
 	erb	:pagina_slave
 end
 
@@ -38,10 +40,10 @@ post '/enviarPregunta' do
 end
 
 
-post '/enviarRespuestaKing' do
+post '/enviar_respuesta_king' do
 	begin
-		@@juego.responder_rey params["respuestaking"]
-		@@juego.validar_respuesta_rey
+		@@juego.responder_king params["respuestaking"]
+		@@juego.validar_respuesta
 	rescue
 		@mensaje = "Palabra invalida"
 	end
