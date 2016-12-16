@@ -24,4 +24,21 @@ describe "acciones del king" do
 		expect {juego.asignar_palabra "hola mundo" }.to raise_error
 	end
 
+	it "ingresar respuesta king invalida" do
+		juego = Game.new
+		juego.asignar_palabra "Pato"
+		juego.agregar_pregunta_slave "Animal"
+		juego.agregar_respuesta_slave "Vaca"
+		juego.validar_respuesta_king.should == true
+	end
+
+	it "ingresar respuesta king ok" do
+		juego = Game.new
+		juego.asignar_palabra "Pato"
+		juego.agregar_pregunta_slave "Animal"
+		juego.agregar_respuesta_slave "Pato"
+		juego.validar_respuesta_king.should == false
+	end
+
+
 end

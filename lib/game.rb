@@ -5,6 +5,7 @@ class Game
 		@letras_a_mostrar = 1
 		@preguntas_slave = []
 		@respuestas_slave = []
+		@respuesta_king = ""
 	end
 
 	def ver_palabra
@@ -50,5 +51,13 @@ class Game
 		@respuestas_slave
 	end
 
+	def responder_rey respuesta
+		@respuesta_king << respuesta
+	end
+
+	def validar_respuesta_king
+		(@respuesta_king[@letras_a_mostrar] != @palabra[@letras_a_mostrar])
+		
+	end
 end
 

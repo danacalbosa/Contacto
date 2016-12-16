@@ -38,4 +38,16 @@ post '/enviarPregunta' do
 	@@juego.agregar_respuesta_slave params["respuesta"]
 	erb :pagina_slave
 end
+
+post '/enviarRespuestaKing' do
+	begin
+		@@juego.responder_rey params["respuestaking"]
+		@@juego.validar_respuesta_rey
+	rescue
+		@mensaje = "Palabra invalida"
+	end
+
+	erb :pagina_king
+end
+
 	
