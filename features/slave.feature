@@ -1,9 +1,12 @@
 Feature: Slave_feature
 
 Scenario: Muestra el titulo Pagina Slave
-	Given voy a pagina inicial_slave
-	Then veo titulo_slave "Pagina Slave"
+	Given voy a pagina inicial
+	And ingreso "Pascual"
+	Then voy a pagina inicial_slave
+	And veo titulo_slave "Pagina Slave"
 	And veo texto "Empieza con"
+	And veo texto "P"
 
 Scenario: Muestra el texto "Es un/a" e ingreso "pregunta"
 	Given voy a pagina inicial_slave
