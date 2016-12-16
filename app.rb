@@ -2,6 +2,7 @@ require 'sinatra'
 require_relative "./lib/game.rb"
 
 @@juego = Game.new
+@@juego.asignar_palabra "FRUTILLA"
 
 
 get '/' do

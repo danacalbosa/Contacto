@@ -10,4 +10,4 @@ Scenario: Muestra "Palabra Secreta"
 
 Scenario: Se ingresa "Palabra secreta"
 	Given voy a pagina inicial
-	Then ingreso "Palabra Secreta"
+	Then ingreso "Frutilla"
