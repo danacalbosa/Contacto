@@ -32,6 +32,5 @@ class Game
 	end
 
 
-
 end
 
