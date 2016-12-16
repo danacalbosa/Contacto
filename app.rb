@@ -41,7 +41,7 @@ end
 post '/enviarRespuestaKing' do
 	begin
 		@@juego.responder_rey params["respuestaking"]
-		@@juego.validar_respuesta_rey
+		@@juego.validar_respuesta
 	rescue
 		@mensaje = "Palabra invalida"
 	end
