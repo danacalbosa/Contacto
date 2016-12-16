@@ -56,6 +56,10 @@ class Game
 		@respuesta_king << respuesta
 	end
 
+	def obtener_preguntas_slave_texto
+		return "Es un " + @preguntas_slave[@preguntas_slave.count-1] + "?"
+	end
+
 	def validar_respuesta (respuesta, cant_caract)
 		$i = 0
 
