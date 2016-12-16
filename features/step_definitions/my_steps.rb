@@ -54,6 +54,9 @@ Then(/^ingreso respuesta "(.*?)"$/) do |value|
 	click_button("Submit")
 end
 
+When(/^hago click "(.*?)"$/) do |arg1|
+  click_link(arg1)
+end
 
 
 

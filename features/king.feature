@@ -26,3 +26,8 @@ Scenario: Muestra el link jugador slave
 	Given voy a pagina inicial
 	Then veo texto "Jugador Slave"
 
+Scenario: Pierde el juego
+	Given voy a pagina inicial
+	When hago click "Si!"
+	Then veo texto "Perdiste!"
+
