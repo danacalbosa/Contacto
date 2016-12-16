@@ -23,4 +23,9 @@ Then(/^veo texto_pregunta "(.*?)"$/) do |texto_pregunta|
 	last_response.body.should =~ /#{texto_pregunta}/m
 end
 
+Then(/^ingreso "(.*?)"$/) do |value|
+	fill_in("palabra", :with => value)
+	click_button("Submit")
+end
+
 
