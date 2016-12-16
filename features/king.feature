@@ -17,3 +17,9 @@ Scenario: Muestra texto "Ver preguntas"
 	Then veo textoPreguntas "Ver Preguntas"
 	And ingreso "Frutilla"
 
+Scenario: Se ingresa "Palabra secreta"
+	Given voy a pagina inicial
+	When ingreso "9"
+	Then veo texto "Palabra invalida"
+
+

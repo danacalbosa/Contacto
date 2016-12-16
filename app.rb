@@ -15,8 +15,12 @@ get '/slave' do
 end
 
 post '/enviarPalabra' do
-	@@juego.asignar_palabra params["palabra"]
-	erb :pagina_king
+	begin
+		@@juego.asignar_palabra params["palabra"]
+	rescue
+		@mensaje = "Palabra invalida"
+		erb :pagina_king
+	end	
 end
 
 get '/verpreguntasslave' do
